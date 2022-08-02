@@ -25,6 +25,14 @@ Example: 3,2,6,5,0,3
 even though, 2-6 is profit 4
 next profit is from 0-3, which is 3 only. and 3 is not greater than 4.
 
+
+    int minPrice=Integer.MAX_VALUE,sell=0;
+        for(int i=0;i<prices.length;i++){
+            minPrice=Math.min(minPrice,prices[i]);
+            sell=Math.max(sell,prices[i]-minPrice);
+        }
+    return sell;
+
 '''
 
 class Solution:
